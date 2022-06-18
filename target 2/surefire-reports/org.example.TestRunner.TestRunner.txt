@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.example.TestRunner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 637.346 s <<< FAILURE! - in org.example.TestRunner.TestRunner
+runScenario(org.example.TestRunner.TestRunner)  Time elapsed: 15.338 s  <<< FAILURE!
+java.lang.AssertionError: Error: Slider 1 didn't navigate to expected URL (Nokia) expected [true] but found [false]
+
+runScenario(org.example.TestRunner.TestRunner)  Time elapsed: 17.693 s  <<< FAILURE!
+java.lang.AssertionError: Error: Slider 2 didn't navigate to expected URL (iphone 6) expected [true] but found [false]
+
+runScenario(org.example.TestRunner.TestRunner)  Time elapsed: 14.521 s  <<< FAILURE!
+java.lang.AssertionError: Error: 3rd Social Link didn't open a new tab expected [true] but found [false]
+

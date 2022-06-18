@@ -1,0 +1,212 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>16/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Jun 18 12:50:30 GMT+02:00 2022</td>
+</tr>
+<tr><td>Total time:</td><td>634 seconds (634587 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Guest user click on 2nd slider", "Guest user click on Slider to go to its product page"</td>
+<td><div><pre>java.lang.AssertionError: Error: Slider 2 didn&apos;t navigate to expected URL (iphone 6) expected [true] but found [false]
+	at org.example.stepDefinitions.SD6_Slider.iphoneAssurance(SD6_Slider.java:35)
+	at ?.website go to iphone 6 page(file:///C:/Users/Blue/Desktop/Projects/E-CommerceAutomation/src/main/resources/features/F6_Slider.feature:13)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace637524006", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace637524006'><pre>java.lang.AssertionError: Error: Slider 2 didn&apos;t navigate to expected URL (iphone 6) expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.example.stepDefinitions.SD6_Slider.iphoneAssurance(SD6_Slider.java:35)
+	at ?.website go to iphone 6 page(file:///C:/Users/Blue/Desktop/Projects/E-CommerceAutomation/src/main/resources/features/F6_Slider.feature:13)
+</pre></div></td>
+<td>17</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Guest user click on 1st slider", "Guest user click on Slider to go to its product page"</td>
+<td><div><pre>java.lang.AssertionError: Error: Slider 1 didn&apos;t navigate to expected URL (Nokia) expected [true] but found [false]
+	at org.example.stepDefinitions.SD6_Slider.nokiaAssurance(SD6_Slider.java:25)
+	at ?.website go to Nokia page(file:///C:/Users/Blue/Desktop/Projects/E-CommerceAutomation/src/main/resources/features/F6_Slider.feature:7)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2134194703", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2134194703'><pre>java.lang.AssertionError: Error: Slider 1 didn&apos;t navigate to expected URL (Nokia) expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.example.stepDefinitions.SD6_Slider.nokiaAssurance(SD6_Slider.java:25)
+	at ?.website go to Nokia page(file:///C:/Users/Blue/Desktop/Projects/E-CommerceAutomation/src/main/resources/features/F6_Slider.feature:7)
+</pre></div></td>
+<td>15</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "guest user can open RSS Link", "Guest User can Open Follow-Us Links"</td>
+<td><div><pre>java.lang.AssertionError: Error: 3rd Social Link didn&apos;t open a new tab expected [true] but found [false]
+	at org.example.stepDefinitions.SD7_FollowUs.rssAssurance(SD7_FollowUs.java:82)
+	at ?.website open a new tab with RSS page(file:///C:/Users/Blue/Desktop/Projects/E-CommerceAutomation/src/main/resources/features/F7_FollowUs.feature:19)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1328954045", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1328954045'><pre>java.lang.AssertionError: Error: 3rd Social Link didn&apos;t open a new tab expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.example.stepDefinitions.SD7_FollowUs.rssAssurance(SD7_FollowUs.java:82)
+	at ?.website open a new tab with RSS page(file:///C:/Users/Blue/Desktop/Projects/E-CommerceAutomation/src/main/resources/features/F7_FollowUs.feature:19)
+</pre></div></td>
+<td>14</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Guest user search by product SKU", "Search Products"</td>
+<td></td>
+<td>27</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Guest user Search by Product KeyWord", "Search Products"</td>
+<td></td>
+<td>22</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Guest user search by product SKU", "Search Products"</td>
+<td></td>
+<td>29</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Guest user search by product SKU", "Search Products"</td>
+<td></td>
+<td>32</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Guest User Sign Up New account", "Guest User Register new account Successfully"</td>
+<td></td>
+<td>89</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Guest user Search by Product KeyWord", "Search Products"</td>
+<td></td>
+<td>24</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Item added successfully signs in Home Page", "Guest User can add to Wishlist"</td>
+<td></td>
+<td>13</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Guest user Search by Product KeyWord", "Search Products"</td>
+<td></td>
+<td>22</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "guest user can open Twitter Link", "Guest User can Open Follow-Us Links"</td>
+<td></td>
+<td>28</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Login with invalid Data", "User Login to their account"</td>
+<td></td>
+<td>25</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Guest User hover on a Category and Choose a sub-category", "Guest User hover Category and choose a sub-category"</td>
+<td></td>
+<td>31</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "guest user can open Facebook Link", "Guest User can Open Follow-Us Links"</td>
+<td></td>
+<td>77</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "guest user can open YouTube Link", "Guest User can Open Follow-Us Links"</td>
+<td></td>
+<td>85</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Item added successfully signs in Wishlist Page", "Guest User can add to Wishlist"</td>
+<td></td>
+<td>16</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Login with valid Data", "User Login to their account"</td>
+<td></td>
+<td>30</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+<tr>
+<td title='org.example.TestRunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.TestRunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Guest User Change Currency to Euro", "Guest User Change Currency to Euro (€)"</td>
+<td></td>
+<td>21</td>
+<td>org.example.TestRunner.TestRunner@4524411f</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+org\example\pages\WishlistPage.class
+org\example\stepDefinitions\SD3_CurrencyChange.class
+org\example\stepDefinitions\SD8_AddToWishlist.class
+org\example\pages\HomePage.class
+org\example\pages\RegisterPage.class
+org\example\stepDefinitions\SD1_Register.class
+org\example\pages\SearchPage.class
+org\example\stepDefinitions\SD2_Login.class
+org\example\pages\ProductPage.class
+org\example\stepDefinitions\SD6_Slider.class
+org\example\stepDefinitions\SD5_HoverCategory.class
+org\example\stepDefinitions\SD4_Search.class
+org\example\stepDefinitions\Hooks.class
+org\example\TestRunner\TestRunner.class
+org\example\pages\CategoryPage.class
+org\example\pages\LoginPage.class
+org\example\stepDefinitions\SD7_FollowUs.class

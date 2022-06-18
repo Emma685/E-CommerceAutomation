@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="629.961">
+<testcase classname="Guest User Register new account Successfully" name="Guest User Sign Up New account" time="89.617">
+<system-out><![CDATA[Given Guest User Navigate to Register Page..................................passed
+When User choose Gender "Female"............................................passed
+And user enter first name "Automation" and last name "Testing"..............passed
+And user enter Date of Birth "15"-"May"-"1990"..............................passed
+And user enter Email "Emma3@AutomationTest.com".............................passed
+And user enter password "P@ssword1".........................................passed
+And User Confirm password "P@ssword1".......................................passed
+And user click on Register Button...........................................passed
+Then Success Message is displayed...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to their account" name="User Login with valid Data" time="30.704">
+<system-out><![CDATA[Given User Navigate to Login Page...........................................passed
+When user enter valid Email "Emma3@AutomationTest.com"......................passed
+And user enter valid Password "P@ssword1"...................................passed
+And user click on Login Button..............................................passed
+Then User Login Successfully................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to their account" name="User Login with invalid Data" time="25.956">
+<system-out><![CDATA[Given User Navigate to Login Page...........................................passed
+When user enter invalid Email "invalid@AutomationTest.com"..................passed
+And user enter invalid Password "invalidPass"...............................passed
+And user click on Login Button..............................................passed
+Then User CanNot Login and Fail Message is displayed........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Guest User Change Currency to Euro (€)" name="Guest User Change Currency to Euro" time="21.184">
+<system-out><![CDATA[When guest user change currency to "Euro"...................................passed
+Then All Product prices will change to be with Euro.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Products" name="Guest user Search by Product KeyWord" time="22.938">
+<system-out><![CDATA[When guest user type product "Apple" in searh box...........................passed
+And guest user click on Search Button.......................................passed
+Then Website goes to Search Page............................................passed
+And List of relevant "Apple" products appears...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Products" name="Guest user Search by Product KeyWord 2" time="24.054">
+<system-out><![CDATA[When guest user type product "Nike" in searh box............................passed
+And guest user click on Search Button.......................................passed
+Then Website goes to Search Page............................................passed
+And List of relevant "Nike" products appears................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Products" name="Guest user Search by Product KeyWord 3" time="22.1">
+<system-out><![CDATA[When guest user type product "Necklace" in searh box........................passed
+And guest user click on Search Button.......................................passed
+Then Website goes to Search Page............................................passed
+And List of relevant "Necklace" products appears............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Products" name="Guest user search by product SKU" time="27.392">
+<system-out><![CDATA[When guest user type product "EG_GEM_NL" in search box......................passed
+And guest user click on Search Button.......................................passed
+And guest user click on te product in search result.........................passed
+Then product page appear with the same "EG_GEM_NL" in product details.......passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Products" name="Guest user search by product SKU 2" time="29.609">
+<system-out><![CDATA[When guest user type product "APPLE_CAM" in search box......................passed
+And guest user click on Search Button.......................................passed
+And guest user click on te product in search result.........................passed
+Then product page appear with the same "APPLE_CAM" in product details.......passed
+]]></system-out>
+</testcase>
+<testcase classname="Search Products" name="Guest user search by product SKU 3" time="32.579">
+<system-out><![CDATA[When guest user type product "CS_TSHIRT" in search box......................passed
+And guest user click on Search Button.......................................passed
+And guest user click on te product in search result.........................passed
+Then product page appear with the same "CS_TSHIRT" in product details.......passed
+]]></system-out>
+</testcase>
+<testcase classname="Guest User hover Category and choose a sub-category" name="Guest User hover on a Category and Choose a sub-category" time="31.061">
+<system-out><![CDATA[When guest user hover on a category and click on Sub-category...............passed
+Then website goes to the chosen sub-category page...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Guest user click on Slider to go to its product page" name="Guest user click on 1st slider" time="15.334">
+<failure message="Error: Slider 1 didn't navigate to expected URL (Nokia) expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[When guest user click on slider "1".........................................passed
+Then website go to Nokia page...............................................failed
+
+StackTrace:
+java.lang.AssertionError: Error: Slider 1 didn't navigate to expected URL (Nokia) expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.example.stepDefinitions.SD6_Slider.nokiaAssurance(SD6_Slider.java:25)
+	at ✽.website go to Nokia page(file:///C:/Users/Blue/Desktop/Projects/E-CommerceAutomation/src/main/resources/features/F6_Slider.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="Guest user click on Slider to go to its product page" name="Guest user click on 2nd slider" time="17.676">
+<failure message="Error: Slider 2 didn't navigate to expected URL (iphone 6) expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[When guest user click on slider "2".........................................passed
+Then website go to iphone 6 page............................................failed
+
+StackTrace:
+java.lang.AssertionError: Error: Slider 2 didn't navigate to expected URL (iphone 6) expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.example.stepDefinitions.SD6_Slider.iphoneAssurance(SD6_Slider.java:35)
+	at ✽.website go to iphone 6 page(file:///C:/Users/Blue/Desktop/Projects/E-CommerceAutomation/src/main/resources/features/F6_Slider.feature:13)
+]]></failure>
+</testcase>
+<testcase classname="Guest User can Open Follow-Us Links" name="guest user can open Facebook Link" time="77.55">
+<system-out><![CDATA[When gust user click on Facebook Link.......................................passed
+Then website open a new tab with Facebook page..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Guest User can Open Follow-Us Links" name="guest user can open Twitter Link" time="28.892">
+<system-out><![CDATA[When gust user click on Twitter Link........................................passed
+Then website open a new tab with Twitter page...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Guest User can Open Follow-Us Links" name="guest user can open RSS Link" time="14.512">
+<failure message="Error: 3rd Social Link didn't open a new tab expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[When gust user click on RSS Link............................................passed
+Then website open a new tab with RSS page...................................failed
+
+StackTrace:
+java.lang.AssertionError: Error: 3rd Social Link didn't open a new tab expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.example.stepDefinitions.SD7_FollowUs.rssAssurance(SD7_FollowUs.java:82)
+	at ✽.website open a new tab with RSS page(file:///C:/Users/Blue/Desktop/Projects/E-CommerceAutomation/src/main/resources/features/F7_FollowUs.feature:19)
+]]></failure>
+</testcase>
+<testcase classname="Guest User can Open Follow-Us Links" name="guest user can open YouTube Link" time="85.691">
+<system-out><![CDATA[When gust user click on YouTube Link........................................passed
+Then website open a new tab with YouTube page...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Guest User can add to Wishlist" name="Item added successfully signs in Home Page" time="13.93">
+<system-out><![CDATA[Given guest user click on heart to add to wishlist..........................passed
+Then Success Message appears with Green Background..........................passed
+And Wishlist item count in Home Page increased by one.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Guest User can add to Wishlist" name="Item added successfully signs in Wishlist Page" time="16.658">
+<system-out><![CDATA[Given guest user click on heart to add to wishlist..........................passed
+When guest user navigate to Wishlist Page...................................passed
+Then guest user can see item quantity number is greater than zero...........passed
+]]></system-out>
+</testcase>
+</testsuite>
